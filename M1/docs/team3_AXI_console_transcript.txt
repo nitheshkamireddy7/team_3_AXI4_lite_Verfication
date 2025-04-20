@@ -1,0 +1,47 @@
+do run.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# QuestaSim-64 vmap 2024.2 Lib Mapping Utility 2024.05 May 20 2024
+# vmap work work 
+# Modifying //thoth.cecs.pdx.edu/Home05/nitheshk/Desktop/AXI4lite/axi4lite.mpf
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:01:17 on Apr 19,2025
+# vlog -reportprogress 300 AXI_slave.sv 
+# -- Compiling module axi_lite_slave
+# 
+# Top level modules:
+# 	axi_lite_slave
+# End time: 22:01:17 on Apr 19,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 22:01:17 on Apr 19,2025
+# vlog -reportprogress 300 AXI_master_tb.sv 
+# -- Compiling module tb_axi_lite_slave
+# 
+# Top level modules:
+# 	tb_axi_lite_slave
+# End time: 22:01:18 on Apr 19,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -gui -voptargs="+acc" work.tb_axi_lite_slave 
+# Start time: 22:01:18 on Apr 19,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.tb_axi_lite_slave(fast)
+# Loading work.axi_lite_slave(fast)
+# TEST 1: Full Write and Read
+# PASS: Read = 0x12345678
+# 
+# TEST 2: Partial Write (Upper Bytes Only)
+# Partial Write Read Back = 0xdeadxxxx
+# PASS: Upper bytes correctly written.
+# 
+# All tests completed.
+# ** Note: $finish    : AXI_master_tb.sv(149)
+#    Time: 175 ns  Iteration: 1  Instance: /tb_axi_lite_slave
+# 1
+# Break in Module tb_axi_lite_slave at AXI_master_tb.sv line 149
+# .main_pane.wave.interior.cs.body.pw.wf
