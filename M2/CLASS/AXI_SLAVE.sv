@@ -18,7 +18,7 @@ module axi_lite_slave #(
 
     // Write Response Channel
     output logic                    BVALID,
-    output logic [1:0]              BRESP,
+    //output logic [1:0]              BRESP,
     input  logic                    BREADY,
 
     // Read Address Channel
@@ -29,7 +29,7 @@ module axi_lite_slave #(
     // Read Data Channel
     output logic [DATA_WIDTH-1:0]   RDATA,
     output logic                    RVALID,
-    output logic [1:0]              RRESP,
+    //output logic [1:0]              RRESP,
     input  logic                    RREADY
 );
 
@@ -50,7 +50,7 @@ module axi_lite_slave #(
       AWREADY <= 0;
       WREADY  <= 0;
       BVALID  <= 0;
-      BRESP   <= 2'b00;
+      //BRESP   <= 2'b00;
       write_state <= IDLE;
     end else begin
       case (write_state)
@@ -75,7 +75,7 @@ module axi_lite_slave #(
             end
 
             BVALID <= 1;
-            BRESP  <= 2'b00; // OKAY
+            //BRESP  <= 2'b00; // OKAY
             write_state <= RESP;
           end
         end
@@ -101,7 +101,7 @@ module axi_lite_slave #(
       ARREADY <= 0;
       RVALID  <= 0;
       RDATA   <= 0;
-      RRESP   <= 2'b00;
+      //RRESP   <= 2'b00;
       read_state <= RIDLE;
     end else begin
       case (read_state)
@@ -117,7 +117,7 @@ module axi_lite_slave #(
             ARREADY <= 0;
             RDATA   <= reg_file[ARADDR[3:2]];
             RVALID  <= 1;
-            RRESP   <= 2'b00; // OKAY
+            //RRESP   <= 2'b00; // OKAY
             read_state <= RIDLE;
           end
 
