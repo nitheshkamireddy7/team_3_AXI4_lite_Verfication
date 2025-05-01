@@ -11,7 +11,7 @@ interface axi_if #(parameter ADDR_WIDTH = 4, DATA_WIDTH = 32) (input logic ACLK,
   logic                  WREADY;
 
   logic                  BVALID;
-  logic [1:0]            BRESP;
+  //logic [1:0]            BRESP;
   logic                  BREADY;
 
   logic [ADDR_WIDTH-1:0] ARADDR;
@@ -20,20 +20,20 @@ interface axi_if #(parameter ADDR_WIDTH = 4, DATA_WIDTH = 32) (input logic ACLK,
 
   logic [DATA_WIDTH-1:0] RDATA;
   logic                  RVALID;
-  logic [1:0]            RRESP;
+  //logic [1:0]            RRESP;
   logic                  RREADY;
 
   modport DUT (input ACLK, input ARESETn,
                input AWADDR, input AWVALID, output AWREADY,
                input WDATA, input WSTRB, input WVALID, output WREADY,
-               output BVALID, output BRESP, input BREADY,
+               output BVALID, input BREADY,
                input ARADDR, input ARVALID, output ARREADY,
-               output RDATA, output RVALID, output RRESP, input RREADY);
+               output RDATA, output RVALID, input RREADY);
 
   modport TB (input ACLK, input ARESETn,
               output AWADDR, output AWVALID, input AWREADY,
               output WDATA, output WSTRB, output WVALID, input WREADY,
-              input BVALID, input BRESP, output BREADY,
+              input BVALID, output BREADY,
               output ARADDR, output ARVALID, input ARREADY,
-              input RDATA, input RVALID, input RRESP, output RREADY);
+              input RDATA, input RVALID,output RREADY);
 endinterface
