@@ -1,7 +1,6 @@
 `timescale 1ns/1ps
 
-
-`include "AXI_Interface.sv"
+`include "axi_if.sv"
 `include "write_txn.sv"
 `include "read_txn.sv"
 `include "write_generator.sv"
@@ -12,30 +11,30 @@
 `include "read_monitor.sv"
 `include "scoreboard.sv"
 `include "environment.sv"
-`include "AXI_Slave.sv"
-
+`include "AXI_SLAVE.sv"
 
 module tb_top;
 
+  // Clock and Reset
   logic ACLK;
   logic ARESETn;
 
-  
+  // Clock Generation
   initial ACLK = 0;
-  always #5 ACLK = ~ACLK;
+  always #5 ACLK = ~ACLK;  // 100MHz
 
-  
+  // Reset Generation
   initial begin
     ARESETn = 0;
-    repeat (2) @(posedge ACLK);
+    repeat(2) @(posedge ACLK);
     ARESETn = 1;
   end
 
-  
-  axi_if axi(ACLK,ARESETn);
+  // Interface instantiation
+  axi_if axi(ACLK, ARESETn);
 
-  
-  axi_lite_slave dut_inst (
+  // DUT instantiation
+  axi_lite_slave #(.ADDR_WIDTH(4), .DATA_WIDTH(32)) dut (
     .ACLK     (ACLK),
     .ARESETn  (ARESETn),
     .AWADDR   (axi.AWADDR),
@@ -55,10 +54,19 @@ module tb_top;
     .RREADY   (axi.RREADY)
   );
 
-  
+  // Environment instantiation and execution
+  environment e;
+
   initial begin
-    env e = new(axi);
+    e = new(axi);
     e.run();
+  end
+
+  // Optional simulation stop
+  initial begin
+    #2000;
+    $display("Simulation completed.");
+    $finish;
   end
 
 endmodule
