@@ -1,4 +1,4 @@
-class Wgenerator;
+class write_generator;
   mailbox #(write_txn) wbox;
   write_txn wtx;
   function new(mailbox #(write_txn) wbox);
