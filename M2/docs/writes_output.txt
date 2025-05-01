@@ -1,0 +1,179 @@
+# Compile of tb_top.sv was successful.
+vsim -gui -voptargs=+acc work.tb_top
+# vsim -gui -voptargs="+acc" work.tb_top 
+# Start time: 02:27:01 on May 01,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# Support of the MGLS_LICENSE_FILE and LM_LICENSE_FILE licensing environment variables will be discontinued starting with the 2025.1 release. Please update to using the SALT_LICENSE_SERVER variable.
+# Please contact Siemens EDA Customer Support (https://support.sw.siemens.com/) for assistance.
+# ** Note: (vopt-143) Recognized 2 FSMs in module "axi_lite_slave(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.tb_top_sv_unit(fast)
+# Loading work.tb_top(fast)
+# Loading work.axi_if(fast__2)
+# Loading work.axi_lite_slave(fast)
+# Loading work.axi_if(fast)
+run -all
+# write_transcation : Addr - 1 , strobe - 9 , data - cd7a9fb5
+# write_transcation : Addr - 2 , strobe - 1 , data - d8f54dbc
+# write_transcation : Addr - 3 , strobe - a , data - 2f0fd7f3
+# write_transcation : Addr - 0 , strobe - 2 , data - b6ba68a0
+# write_transcation : Addr - 0 , strobe - 3 , data - 31f3b110
+# write_transcation : Addr - 2 , strobe - a , data - 76aae9de
+# write_transcation : Addr - 2 , strobe - 9 , data - 8cf2a99b
+# write_transcation : Addr - 3 , strobe - 7 , data - 86f2fe14
+# write_transcation : Addr - 3 , strobe - 0 , data - f1850262
+# write_transcation : Addr - 1 , strobe - 1 , data - 16792fa9
+# read_transaction : Addr = 2
+# read_transaction : Addr = 0
+# read_transaction : Addr = 2
+# read_transaction : Addr = 3
+# read_transaction : Addr = 1
+# read_transaction : Addr = 2
+# read_transaction : Addr = 3
+# read_transaction : Addr = 3
+# read_transaction : Addr = 0
+# read_transaction : Addr = 3
+# DRIVER: Sending write Addr=1, WSTRB=1001, WDATA=cd7a9fb5
+# SCOREBOARD: waiting for write txn...
+# MONITOR: Captured write to addr=1, wstrb=1001, data=cd7a9fb5
+# SCOREBOARD: got write txn Addr=1
+# SCOREBOARD WRITE: Addr = 1 | WSTRB = 1001 | Old = 00000000 | New = cd0000b5
+# SCOREBOARD: waiting for write txn...
+# DRIVER: Sending write Addr=2, WSTRB=0001, WDATA=d8f54dbc
+# MONITOR: Captured write to addr=1, wstrb=1001, data=cd7a9fb5
+# SCOREBOARD: got write txn Addr=1
+# SCOREBOARD WRITE: Addr = 1 | WSTRB = 1001 | Old = cd0000b5 | New = cd0000b5
+# SCOREBOARD: waiting for write txn...
+# MONITOR: Captured write to addr=2, wstrb=0001, data=d8f54dbc
+# SCOREBOARD: got write txn Addr=2
+# SCOREBOARD WRITE: Addr = 2 | WSTRB = 0001 | Old = 00000000 | New = 000000bc
+# SCOREBOARD: waiting for write txn...
+# MONITOR: Captured write to addr=2, wstrb=0001, data=d8f54dbc
+# SCOREBOARD: got write txn Addr=2
+# SCOREBOARD WRITE: Addr = 2 | WSTRB = 0001 | Old = 000000bc | New = 000000bc
+# SCOREBOARD: waiting for write txn...
+# DRIVER: Sending write Addr=3, WSTRB=1010, WDATA=2f0fd7f3
+# MONITOR: Captured write to addr=2, wstrb=0001, data=d8f54dbc
+# SCOREBOARD: got write txn Addr=2
+# SCOREBOARD WRITE: Addr = 2 | WSTRB = 0001 | Old = 000000bc | New = 000000bc
+# SCOREBOARD: waiting for write txn...
+# MONITOR: Captured write to addr=3, wstrb=1010, data=2f0fd7f3
+# SCOREBOARD: got write txn Addr=3
+# SCOREBOARD WRITE: Addr = 3 | WSTRB = 1010 | Old = 00000000 | New = 2f00d700
+# SCOREBOARD: waiting for write txn...
+# MONITOR: Captured write to addr=3, wstrb=1010, data=2f0fd7f3
+# SCOREBOARD: got write txn Addr=3
+# SCOREBOARD WRITE: Addr = 3 | WSTRB = 1010 | Old = 2f00d700 | New = 2f00d700
+# SCOREBOARD: waiting for write txn...
+# DRIVER: Sending write Addr=0, WSTRB=0010, WDATA=b6ba68a0
+# MONITOR: Captured write to addr=3, wstrb=1010, data=2f0fd7f3
+# SCOREBOARD: got write txn Addr=3
+# SCOREBOARD WRITE: Addr = 3 | WSTRB = 1010 | Old = 2f00d700 | New = 2f00d700
+# SCOREBOARD: waiting for write txn...
+# MONITOR: Captured write to addr=0, wstrb=0010, data=b6ba68a0
+# SCOREBOARD: got write txn Addr=0
+# SCOREBOARD WRITE: Addr = 0 | WSTRB = 0010 | Old = 00000000 | New = 00006800
+# SCOREBOARD: waiting for write txn...
+# MONITOR: Captured write to addr=0, wstrb=0010, data=b6ba68a0
+# SCOREBOARD: got write txn Addr=0
+# SCOREBOARD WRITE: Addr = 0 | WSTRB = 0010 | Old = 00006800 | New = 00006800
+# SCOREBOARD: waiting for write txn...
+# DRIVER: Sending write Addr=0, WSTRB=0011, WDATA=31f3b110
+# MONITOR: Captured write to addr=0, wstrb=0010, data=b6ba68a0
+# SCOREBOARD: got write txn Addr=0
+# SCOREBOARD WRITE: Addr = 0 | WSTRB = 0010 | Old = 00006800 | New = 00006800
+# SCOREBOARD: waiting for write txn...
+# MONITOR: Captured write to addr=0, wstrb=0011, data=31f3b110
+# SCOREBOARD: got write txn Addr=0
+# SCOREBOARD WRITE: Addr = 0 | WSTRB = 0011 | Old = 00006800 | New = 0000b110
+# SCOREBOARD: waiting for write txn...
+# MONITOR: Captured write to addr=0, wstrb=0011, data=31f3b110
+# SCOREBOARD: got write txn Addr=0
+# SCOREBOARD WRITE: Addr = 0 | WSTRB = 0011 | Old = 0000b110 | New = 0000b110
+# SCOREBOARD: waiting for write txn...
+# DRIVER: Sending write Addr=2, WSTRB=1010, WDATA=76aae9de
+# MONITOR: Captured write to addr=0, wstrb=0011, data=31f3b110
+# SCOREBOARD: got write txn Addr=0
+# SCOREBOARD WRITE: Addr = 0 | WSTRB = 0011 | Old = 0000b110 | New = 0000b110
+# SCOREBOARD: waiting for write txn...
+# MONITOR: Captured write to addr=2, wstrb=1010, data=76aae9de
+# SCOREBOARD: got write txn Addr=2
+# SCOREBOARD WRITE: Addr = 2 | WSTRB = 1010 | Old = 000000bc | New = 7600e9bc
+# SCOREBOARD: waiting for write txn...
+# MONITOR: Captured write to addr=2, wstrb=1010, data=76aae9de
+# SCOREBOARD: got write txn Addr=2
+# SCOREBOARD WRITE: Addr = 2 | WSTRB = 1010 | Old = 7600e9bc | New = 7600e9bc
+# SCOREBOARD: waiting for write txn...
+# DRIVER: Sending write Addr=2, WSTRB=1001, WDATA=8cf2a99b
+# MONITOR: Captured write to addr=2, wstrb=1010, data=76aae9de
+# SCOREBOARD: got write txn Addr=2
+# SCOREBOARD WRITE: Addr = 2 | WSTRB = 1010 | Old = 7600e9bc | New = 7600e9bc
+# SCOREBOARD: waiting for write txn...
+# MONITOR: Captured write to addr=2, wstrb=1001, data=8cf2a99b
+# SCOREBOARD: got write txn Addr=2
+# SCOREBOARD WRITE: Addr = 2 | WSTRB = 1001 | Old = 7600e9bc | New = 8c00e99b
+# SCOREBOARD: waiting for write txn...
+# MONITOR: Captured write to addr=2, wstrb=1001, data=8cf2a99b
+# SCOREBOARD: got write txn Addr=2
+# SCOREBOARD WRITE: Addr = 2 | WSTRB = 1001 | Old = 8c00e99b | New = 8c00e99b
+# SCOREBOARD: waiting for write txn...
+# DRIVER: Sending write Addr=3, WSTRB=0111, WDATA=86f2fe14
+# MONITOR: Captured write to addr=2, wstrb=1001, data=8cf2a99b
+# SCOREBOARD: got write txn Addr=2
+# SCOREBOARD WRITE: Addr = 2 | WSTRB = 1001 | Old = 8c00e99b | New = 8c00e99b
+# SCOREBOARD: waiting for write txn...
+# MONITOR: Captured write to addr=3, wstrb=0111, data=86f2fe14
+# SCOREBOARD: got write txn Addr=3
+# SCOREBOARD WRITE: Addr = 3 | WSTRB = 0111 | Old = 2f00d700 | New = 2ff2fe14
+# SCOREBOARD: waiting for write txn...
+# MONITOR: Captured write to addr=3, wstrb=0111, data=86f2fe14
+# SCOREBOARD: got write txn Addr=3
+# SCOREBOARD WRITE: Addr = 3 | WSTRB = 0111 | Old = 2ff2fe14 | New = 2ff2fe14
+# SCOREBOARD: waiting for write txn...
+# DRIVER: Sending write Addr=3, WSTRB=0000, WDATA=f1850262
+# MONITOR: Captured write to addr=3, wstrb=0111, data=86f2fe14
+# SCOREBOARD: got write txn Addr=3
+# SCOREBOARD WRITE: Addr = 3 | WSTRB = 0111 | Old = 2ff2fe14 | New = 2ff2fe14
+# SCOREBOARD: waiting for write txn...
+# MONITOR: Captured write to addr=3, wstrb=0000, data=f1850262
+# SCOREBOARD: got write txn Addr=3
+# SCOREBOARD WRITE: Addr = 3 | WSTRB = 0000 | Old = 2ff2fe14 | New = 2ff2fe14
+# SCOREBOARD: waiting for write txn...
+# MONITOR: Captured write to addr=3, wstrb=0000, data=f1850262
+# SCOREBOARD: got write txn Addr=3
+# SCOREBOARD WRITE: Addr = 3 | WSTRB = 0000 | Old = 2ff2fe14 | New = 2ff2fe14
+# SCOREBOARD: waiting for write txn...
+# DRIVER: Sending write Addr=1, WSTRB=0001, WDATA=16792fa9
+# MONITOR: Captured write to addr=3, wstrb=0000, data=f1850262
+# SCOREBOARD: got write txn Addr=3
+# SCOREBOARD WRITE: Addr = 3 | WSTRB = 0000 | Old = 2ff2fe14 | New = 2ff2fe14
+# SCOREBOARD: waiting for write txn...
+# MONITOR: Captured write to addr=1, wstrb=0001, data=16792fa9
+# SCOREBOARD: got write txn Addr=1
+# SCOREBOARD WRITE: Addr = 1 | WSTRB = 0001 | Old = cd0000b5 | New = cd0000a9
+# SCOREBOARD: waiting for write txn...
+# MONITOR: Captured write to addr=1, wstrb=0001, data=16792fa9
+# SCOREBOARD: got write txn Addr=1
+# SCOREBOARD WRITE: Addr = 1 | WSTRB = 0001 | Old = cd0000a9 | New = cd0000a9
+# SCOREBOARD: waiting for write txn...
+# MONITOR: Captured write to addr=1, wstrb=0001, data=16792fa9
+# SCOREBOARD: got write txn Addr=1
+# SCOREBOARD WRITE: Addr = 1 | WSTRB = 0001 | Old = cd0000a9 | New = cd0000a9
+# SCOREBOARD: waiting for write txn...
+# MONITOR: Captured write to addr=1, wstrb=0001, data=16792fa9
+# SCOREBOARD: got write txn Addr=1
+# SCOREBOARD WRITE: Addr = 1 | WSTRB = 0001 | Old = cd0000a9 | New = cd0000a9
+# SCOREBOARD: waiting for write txn...
+# MONITOR: Captured write to addr=1, wstrb=0001, data=16792fa9
+# SCOREBOARD: got write txn Addr=1
+# SCOREBOARD WRITE: Addr = 1 | WSTRB = 0001 | Old = cd0000a9 | New = cd0000a9
+# SCOREBOARD: waiting for write txn...
+# MONITOR: Captured write to addr=1, wstrb=0001, data=16792fa9
+# SCOREBOARD: got write txn Addr=1
+# SCOREBOARD WRITE: Addr = 1 | WSTRB = 0001 | Old = cd0000a9 | New = cd0000a9
+# SCOREBOARD: waiting for write txn...
+# Simulation completed.
+# ** Note: $finish    : //thoth.cecs.pdx.edu/Home05/nitheshk/Desktop/AXI/tb_top.sv(69)
+#    Time: 2 us  Iteration: 0  Instance: /tb_top
