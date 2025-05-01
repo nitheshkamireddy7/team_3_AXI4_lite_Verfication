@@ -18,7 +18,6 @@ module axi_lite_slave #(
 
     // Write Response Channel
     output logic                    BVALID,
-    //output logic [1:0]              BRESP,
     input  logic                    BREADY,
 
     // Read Address Channel
@@ -29,95 +28,96 @@ module axi_lite_slave #(
     // Read Data Channel
     output logic [DATA_WIDTH-1:0]   RDATA,
     output logic                    RVALID,
-    //output logic [1:0]              RRESP,
     input  logic                    RREADY
 );
 
-  // Register file
-  logic [DATA_WIDTH-1:0] reg_file [0:3];
+  // ---------------------------
+  // Internal State and Registers
+  // ---------------------------
+  typedef enum logic [1:0] {IDLE, ADDR_DATA, RESP} write_state_t;
+  typedef enum logic [1:0] {RIDLE, RDATA_STATE} read_state_t;
 
-  // Internal latches
+  write_state_t write_state;
+  read_state_t  read_state;
+
+  logic [DATA_WIDTH-1:0] reg_file [0:3];
   logic [ADDR_WIDTH-1:0] awaddr_latched;
 
   // ---------------------------
-  // Write Address & Data Handling
+  // Write Channel FSM (with continuous AWREADY/WREADY in IDLE)
   // ---------------------------
-  typedef enum logic [1:0] {IDLE, ADDR_DATA, RESP} write_state_t;
-  write_state_t write_state;
-
   always_ff @(posedge ACLK or negedge ARESETn) begin
     if (!ARESETn) begin
-      AWREADY <= 0;
-      WREADY  <= 0;
-      BVALID  <= 0;
-      //BRESP   <= 2'b00;
+      AWREADY     <= 0;
+      WREADY      <= 0;
+      BVALID      <= 0;
       write_state <= IDLE;
+      for (int i = 0; i < 4; i++) begin
+        reg_file[i] <= '0;
+      end
     end else begin
       case (write_state)
         IDLE: begin
+          AWREADY <= 1;
+          WREADY  <= 1;
           if (AWVALID && WVALID) begin
-            AWREADY <= 1;
-            WREADY  <= 1;
             write_state <= ADDR_DATA;
           end
         end
 
         ADDR_DATA: begin
-          if (AWREADY && AWVALID && WREADY && WVALID) begin
-            AWREADY <= 0;
-            WREADY  <= 0;
+          if (AWVALID && AWREADY && WVALID && WREADY) begin
+            AWREADY        <= 0;
+            WREADY         <= 0;
             awaddr_latched <= AWADDR;
 
-            // Byte-wise write using WSTRB
+            // Apply byte-wise write
             for (int i = 0; i < 4; i++) begin
               if (WSTRB[i])
                 reg_file[AWADDR[3:2]][8*i +: 8] <= WDATA[8*i +: 8];
             end
 
-            BVALID <= 1;
-            //BRESP  <= 2'b00; // OKAY
+            BVALID      <= 1;
             write_state <= RESP;
           end
         end
 
         RESP: begin
-          if (BVALID && BREADY) begin
-            BVALID <= 0;
-            write_state <= IDLE;
-          end
-        end
+        if (BVALID && BREADY) begin
+        BVALID      <= 0;
+        AWREADY     <= 1;   // <-- add this
+        WREADY      <= 1;   // <-- and this
+       write_state <= IDLE;
+       end
+       end
+
       endcase
     end
   end
 
   // ---------------------------
-  // Read Address Handling
+  // Read Channel FSM
   // ---------------------------
-  typedef enum logic [1:0] {RIDLE, RDATA} read_state_t;
-  read_state_t read_state;
-
   always_ff @(posedge ACLK or negedge ARESETn) begin
     if (!ARESETn) begin
-      ARREADY <= 0;
-      RVALID  <= 0;
-      RDATA   <= 0;
-      //RRESP   <= 2'b00;
-      read_state <= RIDLE;
+      ARREADY     <= 0;
+      RVALID      <= 0;
+      RDATA       <= 0;
+      read_state  <= RIDLE;
     end else begin
       case (read_state)
         RIDLE: begin
           if (ARVALID) begin
-            ARREADY <= 1;
-            read_state <= RDATA;
+            ARREADY    <= 1;
+            read_state <= RDATA_STATE;
           end
         end
 
-        RDATA: begin
+        RDATA_STATE: begin
           if (ARVALID && ARREADY) begin
-            ARREADY <= 0;
+            
             RDATA   <= reg_file[ARADDR[3:2]];
             RVALID  <= 1;
-            //RRESP   <= 2'b00; // OKAY
             read_state <= RIDLE;
           end
 
@@ -125,17 +125,6 @@ module axi_lite_slave #(
             RVALID <= 0;
         end
       endcase
-    end
-  end
-
-  // ---------------------------
-  // Register Reset
-  // ---------------------------
-  always_ff @(posedge ACLK or negedge ARESETn) begin
-    if (!ARESETn) begin
-      for (int i = 0; i < 4; i++) begin
-        reg_file[i] <= '0;
-      end
     end
   end
 
