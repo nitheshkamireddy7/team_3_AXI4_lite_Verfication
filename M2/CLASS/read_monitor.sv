@@ -7,17 +7,22 @@ class read_monitor;
   endfunction
 
   task run;
-    read_txn rtx;
-    forever begin
-    wait( axi.ARVALID && axi.ARREADY);
-    wait( axi.RVALID && axi.RREADY);
+  read_txn rtx;
+  forever begin
+    wait(axi.ARVALID && axi.ARREADY);
+    bit [3:0] addr = axi.ARADDR;
+
+    
+    wait(axi.RVALID && axi.RREADY);
     @(posedge axi.ACLK);
-      rtx = new();
-      rtx.ARADDR = axi.ARADDR;
-      rtx.RDATA = axi.RDATA;
-      rsbox.put(rtx);
-    end
-  endtask
-endclass
+
+    
+    rtx = new();
+    rtx.ARADDR = addr;
+    rtx.RDATA  = axi.RDATA;
+    rsbox.put(rtx);
+  end
+endtask
+
    
     
