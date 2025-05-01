@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 
 
-`include "axi_if.sv"
+`include "AXI_Interface.sv"
 `include "write_txn.sv"
 `include "read_txn.sv"
 `include "write_generator.sv"
@@ -11,8 +11,8 @@
 `include "write_monitor.sv"
 `include "read_monitor.sv"
 `include "scoreboard.sv"
-`include "env.sv"
-`include "dut.sv"  // your RTL (must match interface ports)
+`include "environment.sv"
+`include "AXI_Slave.sv"
 
 
 module tb_top;
@@ -35,7 +35,7 @@ module tb_top;
   axi_if axi(ACLK,ARESETn);
 
   
-  dut dut_inst (
+  axi_lite_slave dut_inst (
     .ACLK     (ACLK),
     .ARESETn  (ARESETn),
     .AWADDR   (axi.AWADDR),
