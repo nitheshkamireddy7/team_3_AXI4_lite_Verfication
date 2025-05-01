@@ -1,11 +1,13 @@
 class environment;
   virtual axi_if axi;
 
-  mailbox #(read_txn) rbox;
-  mailbox #(read_txn) rsbox;
+  // Mailboxes
+  mailbox #(read_txn)  rbox;
+  mailbox #(read_txn)  rsbox;
   mailbox #(write_txn) wbox;
   mailbox #(write_txn) wsbox;
 
+  // Component handles
   write_generator wgen;
   read_generator  rgen;
   write_driver    wdrv;
@@ -13,25 +15,29 @@ class environment;
   write_monitor   wmon;
   read_monitor    rmon;
   scoreboard      sb;
-  
-  function new(axi_if axi);
+
+  // Constructor with virtual interface
+  function new(virtual axi_if axi);
     this.axi = axi;
-  
-    rbox = new();
+
+    // Instantiate mailboxes
+    rbox  = new();
     rsbox = new();
-    wbox = new();
+    wbox  = new();
     wsbox = new();
+
+    // Instantiate components
     wgen = new(wbox);
     rgen = new(rbox);
-    wdrv = new(wbox,axi);
-    rdrv = new(rbox,axi);
-    wmon = new(wsbox,axi);
-    rmon = new(rsbox,axi);
-    sb = new(wsbox,rsbox);
+    wdrv = new(wbox, axi);
+    rdrv = new(rbox, axi);
+    wmon = new(wsbox, axi);
+    rmon = new(rsbox, axi);
+    sb   = new(wsbox, rsbox);
   endfunction
 
-  
-    task run;
+  // Run task to start everything
+  task run;
     fork
       wgen.run();
       rgen.run();
@@ -43,5 +49,3 @@ class environment;
     join_none
   endtask
 endclass
-  
-  
