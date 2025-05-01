@@ -1,23 +1,33 @@
 class read_driver;
   mailbox #(read_txn) rbox;
-  virtual axi_vif axi;
-  function new(mailbox #(read_txn) rbox,axi_vif axi);
+  virtual axi_if axi;
+
+  function new(mailbox #(read_txn) rbox, virtual axi_if axi);
     this.rbox = rbox;
-    this.axi = axi;
+    this.axi  = axi;
   endfunction
 
   task run;
     read_txn rtx;
     forever begin
       rbox.get(rtx);
-      axi.ARADDR <= rtx.ARADDR;
+
+      // Drive read address and assert ARVALID
+      axi.ARADDR  <= rtx.ARADDR;
       axi.ARVALID <= 1;
-      wait(axi.ARREADY);
+
+      // Wait for AR handshake
+      wait (axi.ARREADY);
       axi.ARVALID <= 0;
-      wait(axi.RVALID);
-      axi.RREADY <=1;
+
+      // Wait for read data response
+      wait (axi.RVALID);
+      axi.RREADY <= 1;
       @(posedge axi.ACLK);
-      axi.RREADY = 0;  
+      axi.RREADY <= 0;
+
+      // Optional delay to space transactions
+      @(posedge axi.ACLK);
     end
   endtask
 endclass
