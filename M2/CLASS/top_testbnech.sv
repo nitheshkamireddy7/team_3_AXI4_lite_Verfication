@@ -1,15 +1,38 @@
+`timescale 1ns/1ps
+
+
+`include "axi_if.sv"
+`include "write_txn.sv"
+`include "read_txn.sv"
+`include "write_generator.sv"
+`include "read_generator.sv"
+`include "write_driver.sv"
+`include "read_driver.sv"
+`include "write_monitor.sv"
+`include "read_monitor.sv"
+`include "scoreboard.sv"
+`include "env.sv"
+`include "dut.sv"  // your RTL (must match interface ports)
+
+
 module tb_top;
 
-  
   logic ACLK;
   logic ARESETn;
 
-  /
+  
   initial ACLK = 0;
-  always #5 ACLK = ~ACLK;  // 100MHz clock
+  always #5 ACLK = ~ACLK;
 
   
-  axi_if axi();
+  initial begin
+    ARESETn = 0;
+    repeat (2) @(posedge ACLK);
+    ARESETn = 1;
+  end
+
+  
+  axi_if axi(ACLK,ARESETn);
 
   
   dut dut_inst (
@@ -34,16 +57,8 @@ module tb_top;
 
   
   initial begin
-    ARESETn = 0;
-    repeat (2) @(posedge ACLK);
-    ARESETn = 1;
-  end
-
-  
-  initial begin
-    env e;
-    e = new(axi);        
-    e.run();             
+    env e = new(axi);
+    e.run();
   end
 
 endmodule
