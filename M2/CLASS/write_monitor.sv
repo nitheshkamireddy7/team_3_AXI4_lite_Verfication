@@ -20,7 +20,7 @@ class write_monitor;
       wtx.AWADDR = axi.AWADDR;
       wtx.WSTRB  = axi.WSTRB;
       wtx.WDATA  = axi.WDATA;
-      $display("MONITOR: Captured write to addr=%0d, wstrb=%b, data=%h", wtx.AWADDR, wtx.WSTRB, wtx.WDATA);
+      //$display("MONITOR: Captured write to addr=%0d, wstrb=%b, data=%h", wtx.AWADDR, wtx.WSTRB, wtx.WDATA);
 
 
       wsbox.put(wtx);
