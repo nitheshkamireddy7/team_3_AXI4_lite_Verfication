@@ -44,7 +44,7 @@ module axi_lite_slave #(
   logic [ADDR_WIDTH-1:0] awaddr_latched;
 
   // ---------------------------
-  // Write Channel FSM (with continuous AWREADY/WREADY in IDLE)
+  // Write Channel FSM 
   // ---------------------------
   always_ff @(posedge ACLK or negedge ARESETn) begin
     if (!ARESETn) begin
@@ -85,8 +85,8 @@ module axi_lite_slave #(
         RESP: begin
         if (BVALID && BREADY) begin
         BVALID      <= 0;
-        AWREADY     <= 1;   // <-- add this
-        WREADY      <= 1;   // <-- and this
+        AWREADY     <= 0;   // <-- add this
+        WREADY      <= 0;   // <-- and this
        write_state <= IDLE;
        end
        end
@@ -98,34 +98,41 @@ module axi_lite_slave #(
   // ---------------------------
   // Read Channel FSM
   // ---------------------------
-  always_ff @(posedge ACLK or negedge ARESETn) begin
-    if (!ARESETn) begin
-      ARREADY     <= 0;
-      RVALID      <= 0;
-      RDATA       <= 0;
-      read_state  <= RIDLE;
-    end else begin
-      case (read_state)
-        RIDLE: begin
-          if (ARVALID) begin
-            ARREADY    <= 1;
-            read_state <= RDATA_STATE;
-          end
+  logic [ADDR_WIDTH-1:0] araddr_latched;
+
+always_ff @(posedge ACLK or negedge ARESETn) begin
+  if (!ARESETn) begin
+    ARREADY     <= 0;
+    RVALID      <= 0;
+    RDATA       <= 0;
+    araddr_latched <= 0;
+    read_state  <= RIDLE;
+  end else begin
+    case (read_state)
+      RIDLE: begin
+        if (ARVALID) begin
+          ARREADY        <= 1;
         end
 
-        RDATA_STATE: begin
-          if (ARVALID && ARREADY) begin
-            
-            RDATA   <= reg_file[ARADDR[3:2]];
-            RVALID  <= 1;
-            read_state <= RIDLE;
-          end
-
-          if (RVALID && RREADY)
-            RVALID <= 0;
+        if (ARVALID && ARREADY) begin
+          araddr_latched <= ARADDR;     
+          ARREADY        <= 0;
+          read_state     <= RDATA_STATE;
         end
-      endcase
-    end
+      end
+
+      RDATA_STATE: begin
+        RDATA  <= reg_file[araddr_latched[3:2]];
+        RVALID <= 1;
+
+        if (RVALID && RREADY) begin
+          RVALID     <= 0;
+          read_state <= RIDLE;
+        end
+      end
+    endcase
   end
+end
+
 
 endmodule
