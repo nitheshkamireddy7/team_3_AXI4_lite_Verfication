@@ -12,22 +12,32 @@ class read_driver;
     forever begin
       rbox.get(rtx);
 
-      // Drive read address and assert ARVALID
+      
+      @(posedge axi.ACLK);
       axi.ARADDR  <= rtx.ARADDR;
       axi.ARVALID <= 1;
 
-      // Wait for AR handshake
-      wait (axi.ARREADY);
-      axi.ARVALID <= 0;
+      $display("READ DRIVER: ARADDR = %0d", rtx.ARADDR);
 
-      // Wait for read data response
+      
+      wait (axi.ARREADY);
+
+      @(posedge axi.ACLK);
+      axi.ARVALID <= 0;  
+      
       wait (axi.RVALID);
+
+      
+      rtx.RDATA = axi.RDATA;
+
+      
+      @(posedge axi.ACLK);
       axi.RREADY <= 1;
+
       @(posedge axi.ACLK);
       axi.RREADY <= 0;
 
-      // Optional delay to space transactions
-      @(posedge axi.ACLK);
+      
     end
   endtask
 endclass
