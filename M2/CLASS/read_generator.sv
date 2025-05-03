@@ -7,6 +7,7 @@ class read_generator;
   endfunction
 
   task run;
+
     repeat(20) begin
       rtx = new();
       if(rtx.randomize()) begin
