@@ -7,7 +7,8 @@ class read_generator;
   endfunction
 
   task run;
-    repeat(10) begin
+
+    repeat(20) begin
       rtx = new();
       if(rtx.randomize()) begin
         rbox.put(rtx);
