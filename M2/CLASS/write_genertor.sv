@@ -6,7 +6,7 @@ class write_generator;
   endfunction
   task run;
     
-    repeat(10) begin
+    repeat(20) begin
     wtx = new();
     
     if(wtx.randomize()) begin 
