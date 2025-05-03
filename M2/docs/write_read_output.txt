@@ -1,5 +1,4 @@
-run -all
-# write_transcation : Addr - 4 , strobe - 9 , data - cd7a9fb5
+ write_transcation : Addr - 4 , strobe - 9 , data - cd7a9fb5
 # write_transcation : Addr - 8 , strobe - 1 , data - d8f54dbc
 # write_transcation : Addr - c , strobe - a , data - 2f0fd7f3
 # write_transcation : Addr - 0 , strobe - 2 , data - b6ba68a0
@@ -9,6 +8,16 @@ run -all
 # write_transcation : Addr - c , strobe - 7 , data - 86f2fe14
 # write_transcation : Addr - c , strobe - 0 , data - f1850262
 # write_transcation : Addr - 4 , strobe - 1 , data - 16792fa9
+# write_transcation : Addr - 4 , strobe - 3 , data - 8720e766
+# write_transcation : Addr - 0 , strobe - 7 , data - 617512ea
+# write_transcation : Addr - 8 , strobe - 4 , data - 73053184
+# write_transcation : Addr - 4 , strobe - 1 , data - 1163730c
+# write_transcation : Addr - 4 , strobe - 6 , data - 5159d10e
+# write_transcation : Addr - 0 , strobe - f , data - 1b9afd31
+# write_transcation : Addr - 8 , strobe - 6 , data - 7b15142d
+# write_transcation : Addr - c , strobe - c , data - 839f2cfa
+# write_transcation : Addr - 8 , strobe - 3 , data - bc6620dc
+# write_transcation : Addr - c , strobe - 8 , data - 50cce2b7
 # read_transaction : Addr = 8
 # read_transaction : Addr = 0
 # read_transaction : Addr = 8
@@ -19,6 +28,16 @@ run -all
 # read_transaction : Addr = c
 # read_transaction : Addr = 0
 # read_transaction : Addr = c
+# read_transaction : Addr = 4
+# read_transaction : Addr = 8
+# read_transaction : Addr = 0
+# read_transaction : Addr = 4
+# read_transaction : Addr = 0
+# read_transaction : Addr = 0
+# read_transaction : Addr = c
+# read_transaction : Addr = 4
+# read_transaction : Addr = 0
+# read_transaction : Addr = 8
 # READ DRIVER: ARADDR = 8
 # Scoreboard PASS: Addr=0x8 | Data=0x00000000 | Expected from reference model=0x00000000
 # READ DRIVER: ARADDR = 0
@@ -36,11 +55,30 @@ run -all
 # READ DRIVER: ARADDR = 12
 # Scoreboard PASS: Addr=0xc | Data=0x2ff2fe14 | Expected from reference model=0x2ff2fe14
 # READ DRIVER: ARADDR = 0
-# Scoreboard PASS: Addr=0x0 | Data=0x0000b110 | Expected from reference model=0x0000b110
+# Scoreboard PASS: Addr=0x0 | Data=0x007512ea | Expected from reference model=0x007512ea
 # READ DRIVER: ARADDR = 12
 # Scoreboard PASS: Addr=0xc | Data=0x2ff2fe14 | Expected from reference model=0x2ff2fe14
-# SCOREBOARD: Completed 10 checks. Simulation done!
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0xcd59d10c | Expected from reference model=0xcd59d10c
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x8c15149b | Expected from reference model=0x8c15149b
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x1b9afd31 | Expected from reference model=0x1b9afd31
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0xcd59d10c | Expected from reference model=0xcd59d10c
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x1b9afd31 | Expected from reference model=0x1b9afd31
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x1b9afd31 | Expected from reference model=0x1b9afd31
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x509ffe14 | Expected from reference model=0x509ffe14
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0xcd59d10c | Expected from reference model=0xcd59d10c
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x1b9afd31 | Expected from reference model=0x1b9afd31
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x8c1520dc | Expected from reference model=0x8c1520dc
+# SCOREBOARD: Completed 20 checks. Simulation done!
 # ** Note: $finish    : scoreboard.sv(73)
-#    Time: 595 ns  Iteration: 4  Region: /tb_top_sv_unit::scoreboard::run
+#    Time: 1195 ns  Iteration: 4  Region: /tb_top_sv_unit::scoreboard::run
 # 1
-# Break in Task tb_top_sv_unit/scoreboard::run at scoreboard.sv line 73
