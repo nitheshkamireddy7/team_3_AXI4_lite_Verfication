@@ -3,7 +3,7 @@ class scoreboard;
   mailbox #(read_txn)  rsbox;
 
   bit [31:0] memory_model [0:3];  // 4 memory locations
-  int total_checks = 10;          
+  int total_checks = 20;          
   int check_count  = 0;
 
   // Constructor
