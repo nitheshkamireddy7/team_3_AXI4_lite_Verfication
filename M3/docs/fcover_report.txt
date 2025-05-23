@@ -1,0 +1,64 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /tb_top_sv_unit
+=== Design Unit: work.tb_top_sv_unit
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      1        na        na   100.00%
+        Coverpoints/Crosses          2        na        na        na
+            Covergroup Bins          7         7         0   100.00%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /tb_top_sv_unit/axi_coverage/cg_read            100.00%        100          -    Covered              
+    covered/total bins:                                     7          7          -                      
+    missing/total bins:                                     0          7          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint #coverpoint__0#                        100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin addr_vals[0]                                   53          1          -    Covered              
+        bin addr_vals[4]                                   47          1          -    Covered              
+        bin addr_vals[8]                                   45          1          -    Covered              
+        bin addr_vals[12]                                  54          1          -    Covered              
+    Coverpoint #coverpoint__1#                        100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin low_data                                        6          1          -    Covered              
+        bin mid_data                                        2          1          -    Covered              
+        bin high_data                                     191          1          -    Covered              
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /tb_top_sv_unit/axi_coverage/cg_read            100.00%        100          -    Covered              
+    covered/total bins:                                     7          7          -                      
+    missing/total bins:                                     0          7          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint #coverpoint__0#                        100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin addr_vals[0]                                   53          1          -    Covered              
+        bin addr_vals[4]                                   47          1          -    Covered              
+        bin addr_vals[8]                                   45          1          -    Covered              
+        bin addr_vals[12]                                  54          1          -    Covered              
+    Coverpoint #coverpoint__1#                        100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin low_data                                        6          1          -    Covered              
+        bin mid_data                                        2          1          -    Covered              
+        bin high_data                                     191          1          -    Covered              
+
+TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 1
+
+Total Coverage By Instance (filtered view): 100.00%
+
