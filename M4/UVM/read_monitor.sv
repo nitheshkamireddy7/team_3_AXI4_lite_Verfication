@@ -1,7 +1,8 @@
+
 class read_monitor extends uvm_monitor;
 
   virtual axi_if axi;
-  uvm_analysis_port #(scoreboard_txn) ap;  // ✅ Send scoreboard_txn, not read_txn
+  uvm_analysis_port #(scoreboard_txn) ap; 
 
   `uvm_component_utils(read_monitor)
 

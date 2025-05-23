@@ -1,0 +1,102 @@
+# UVM_INFO @ 0: reporter [RNTST] Running test axi_test...
+# UVM_INFO test.sv(22) @ 0: uvm_test_top [AXI_TEST] Starting write and read sequences
+# UVM_INFO write_sequence.sv(17) @ 0: uvm_test_top.env.wagent.sequencer@@wseq [DRV] Driving TXN: addr=8, strb=0001, data=1cdae91a
+# UVM_INFO read_driver.sv(29) @ 5000: uvm_test_top.env.ragent.driver [READ_DRV] ARADDR = 12
+# UVM_INFO scoreboard.sv(39) @ 55000: uvm_test_top.env.scoreboard [SB] PASS: Addr=0xc | Data=0x00000000
+# UVM_INFO read_sequence.sv(18) @ 65000: uvm_test_top.env.ragent.sequencer@@rseq [READ_GEN] read_transaction : Addr = c
+# UVM_INFO read_driver.sv(29) @ 75000: uvm_test_top.env.ragent.driver [READ_DRV] ARADDR = 8
+# UVM_INFO write_sequence.sv(17) @ 75000: uvm_test_top.env.wagent.sequencer@@wseq [DRV] Driving TXN: addr=4, strb=0110, data=b3d2daba
+# UVM_INFO scoreboard.sv(39) @ 115000: uvm_test_top.env.scoreboard [SB] PASS: Addr=0x8 | Data=0x0000001a
+# UVM_INFO read_sequence.sv(18) @ 125000: uvm_test_top.env.ragent.sequencer@@rseq [READ_GEN] read_transaction : Addr = 8
+# UVM_INFO write_sequence.sv(17) @ 125000: uvm_test_top.env.wagent.sequencer@@wseq [DRV] Driving TXN: addr=4, strb=1111, data=3b03f361
+# UVM_INFO write_driver.sv(98) @ 125000: uvm_test_top.env.wagent.driver [DRV] WriteTXN is driven through virtual interface to DUT : addr=4, strb=1111, data=3b03f361
+# UVM_INFO read_driver.sv(29) @ 135000: uvm_test_top.env.ragent.driver [READ_DRV] ARADDR = 8
+# UVM_INFO write_sequence.sv(17) @ 155000: uvm_test_top.env.wagent.sequencer@@wseq [DRV] Driving TXN: addr=c, strb=1001, data=e53e5bd5
+# UVM_INFO write_driver.sv(98) @ 155000: uvm_test_top.env.wagent.driver [DRV] WriteTXN is driven through virtual interface to DUT : addr=c, strb=1001, data=e53e5bd5
+# UVM_INFO scoreboard.sv(39) @ 175000: uvm_test_top.env.scoreboard [SB] PASS: Addr=0x8 | Data=0x0000001a
+# UVM_INFO read_sequence.sv(18) @ 185000: uvm_test_top.env.ragent.sequencer@@rseq [READ_GEN] read_transaction : Addr = 8
+# UVM_INFO read_driver.sv(29) @ 195000: uvm_test_top.env.ragent.driver [READ_DRV] ARADDR = 0
+# UVM_INFO write_sequence.sv(17) @ 195000: uvm_test_top.env.wagent.sequencer@@wseq [DRV] Driving TXN: addr=0, strb=1101, data=55e7b432
+# UVM_INFO write_driver.sv(98) @ 195000: uvm_test_top.env.wagent.driver [DRV] WriteTXN is driven through virtual interface to DUT : addr=0, strb=1101, data=55e7b432
+# UVM_INFO scoreboard.sv(39) @ 235000: uvm_test_top.env.scoreboard [SB] PASS: Addr=0x0 | Data=0x55e70032
+# UVM_INFO write_sequence.sv(17) @ 235000: uvm_test_top.env.wagent.sequencer@@wseq [DRV] Driving TXN: addr=c, strb=1000, data=818c228a
+# UVM_INFO write_driver.sv(98) @ 235000: uvm_test_top.env.wagent.driver [DRV] WriteTXN is driven through virtual interface to DUT : addr=c, strb=1000, data=818c228a
+# UVM_INFO read_sequence.sv(18) @ 245000: uvm_test_top.env.ragent.sequencer@@rseq [READ_GEN] read_transaction : Addr = 0
+# UVM_INFO read_driver.sv(29) @ 255000: uvm_test_top.env.ragent.driver [READ_DRV] ARADDR = 0
+# UVM_INFO write_sequence.sv(17) @ 275000: uvm_test_top.env.wagent.sequencer@@wseq [DRV] Driving TXN: addr=c, strb=0110, data=a2e9e692
+# UVM_INFO write_driver.sv(98) @ 275000: uvm_test_top.env.wagent.driver [DRV] WriteTXN is driven through virtual interface to DUT : addr=c, strb=0110, data=a2e9e692
+# UVM_INFO scoreboard.sv(39) @ 295000: uvm_test_top.env.scoreboard [SB] PASS: Addr=0x0 | Data=0x55e70032
+# UVM_INFO read_sequence.sv(18) @ 305000: uvm_test_top.env.ragent.sequencer@@rseq [READ_GEN] read_transaction : Addr = 0
+# UVM_INFO read_driver.sv(29) @ 315000: uvm_test_top.env.ragent.driver [READ_DRV] ARADDR = 0
+# UVM_INFO write_sequence.sv(17) @ 315000: uvm_test_top.env.wagent.sequencer@@wseq [DRV] Driving TXN: addr=4, strb=1110, data=15d4c2fb
+# UVM_INFO write_driver.sv(98) @ 315000: uvm_test_top.env.wagent.driver [DRV] WriteTXN is driven through virtual interface to DUT : addr=4, strb=1110, data=15d4c2fb
+# UVM_INFO scoreboard.sv(39) @ 355000: uvm_test_top.env.scoreboard [SB] PASS: Addr=0x0 | Data=0x55e70032
+# UVM_INFO write_sequence.sv(17) @ 355000: uvm_test_top.env.wagent.sequencer@@wseq [DRV] Driving TXN: addr=8, strb=0001, data=a6623cd3
+# UVM_INFO write_driver.sv(98) @ 355000: uvm_test_top.env.wagent.driver [DRV] WriteTXN is driven through virtual interface to DUT : addr=8, strb=0001, data=a6623cd3
+# UVM_INFO read_sequence.sv(18) @ 365000: uvm_test_top.env.ragent.sequencer@@rseq [READ_GEN] read_transaction : Addr = 0
+# UVM_INFO read_driver.sv(29) @ 375000: uvm_test_top.env.ragent.driver [READ_DRV] ARADDR = 12
+# UVM_INFO write_sequence.sv(17) @ 395000: uvm_test_top.env.wagent.sequencer@@wseq [DRV] Driving TXN: addr=4, strb=1110, data=3213077b
+# UVM_INFO write_driver.sv(98) @ 395000: uvm_test_top.env.wagent.driver [DRV] WriteTXN is driven through virtual interface to DUT : addr=4, strb=1110, data=3213077b
+# UVM_INFO scoreboard.sv(39) @ 415000: uvm_test_top.env.scoreboard [SB] PASS: Addr=0xc | Data=0x81e9e6d5
+# UVM_INFO read_sequence.sv(18) @ 425000: uvm_test_top.env.ragent.sequencer@@rseq [READ_GEN] read_transaction : Addr = c
+# UVM_INFO read_driver.sv(29) @ 435000: uvm_test_top.env.ragent.driver [READ_DRV] ARADDR = 8
+# UVM_INFO write_sequence.sv(17) @ 435000: uvm_test_top.env.wagent.sequencer@@wseq [DRV] Driving TXN: addr=8, strb=0111, data=a2e35557
+# UVM_INFO write_driver.sv(98) @ 435000: uvm_test_top.env.wagent.driver [DRV] WriteTXN is driven through virtual interface to DUT : addr=8, strb=0111, data=a2e35557
+# UVM_INFO scoreboard.sv(39) @ 475000: uvm_test_top.env.scoreboard [SB] PASS: Addr=0x8 | Data=0x00e35557
+# UVM_INFO write_sequence.sv(17) @ 475000: uvm_test_top.env.wagent.sequencer@@wseq [DRV] Driving TXN: addr=0, strb=1110, data=29dabbd7
+# UVM_INFO write_driver.sv(98) @ 475000: uvm_test_top.env.wagent.driver [DRV] WriteTXN is driven through virtual interface to DUT : addr=0, strb=1110, data=29dabbd7
+# UVM_INFO read_sequence.sv(18) @ 485000: uvm_test_top.env.ragent.sequencer@@rseq [READ_GEN] read_transaction : Addr = 8
+# UVM_INFO read_driver.sv(29) @ 495000: uvm_test_top.env.ragent.driver [READ_DRV] ARADDR = 4
+# UVM_INFO write_sequence.sv(17) @ 515000: uvm_test_top.env.wagent.sequencer@@wseq [DRV] Driving TXN: addr=8, strb=0101, data=8608bc88
+# UVM_INFO write_driver.sv(98) @ 515000: uvm_test_top.env.wagent.driver [DRV] WriteTXN is driven through virtual interface to DUT : addr=8, strb=0101, data=8608bc88
+# UVM_INFO scoreboard.sv(39) @ 535000: uvm_test_top.env.scoreboard [SB] PASS: Addr=0x4 | Data=0x32130761
+# UVM_INFO read_sequence.sv(18) @ 545000: uvm_test_top.env.ragent.sequencer@@rseq [READ_GEN] read_transaction : Addr = 4
+# UVM_INFO read_driver.sv(29) @ 555000: uvm_test_top.env.ragent.driver [READ_DRV] ARADDR = 12
+# UVM_INFO write_sequence.sv(17) @ 555000: uvm_test_top.env.wagent.sequencer@@wseq [DRV] Driving TXN: addr=c, strb=1001, data=a01210bf
+# UVM_INFO write_driver.sv(98) @ 555000: uvm_test_top.env.wagent.driver [DRV] WriteTXN is driven through virtual interface to DUT : addr=c, strb=1001, data=a01210bf
+# UVM_INFO scoreboard.sv(39) @ 595000: uvm_test_top.env.scoreboard [SB] PASS: Addr=0xc | Data=0xa0e9e6bf
+# UVM_INFO write_sequence.sv(17) @ 595000: uvm_test_top.env.wagent.sequencer@@wseq [DRV] Driving TXN: addr=c, strb=1011, data=e44f74f1
+# UVM_INFO write_driver.sv(98) @ 595000: uvm_test_top.env.wagent.driver [DRV] WriteTXN is driven through virtual interface to DUT : addr=c, strb=1011, data=e44f74f1
+# UVM_INFO read_sequence.sv(18) @ 605000: uvm_test_top.env.ragent.sequencer@@rseq [READ_GEN] read_transaction : Addr = c
+# UVM_INFO read_driver.sv(29) @ 615000: uvm_test_top.env.ragent.driver [READ_DRV] ARADDR = 0
+# UVM_INFO write_sequence.sv(17) @ 635000: uvm_test_top.env.wagent.sequencer@@wseq [DRV] Driving TXN: addr=8, strb=1110, data=b48f69ba
+# UVM_INFO write_driver.sv(98) @ 635000: uvm_test_top.env.wagent.driver [DRV] WriteTXN is driven through virtual interface to DUT : addr=8, strb=1110, data=b48f69ba
+# UVM_INFO scoreboard.sv(39) @ 655000: uvm_test_top.env.scoreboard [SB] PASS: Addr=0x0 | Data=0x29dabb32
+# UVM_INFO read_sequence.sv(18) @ 665000: uvm_test_top.env.ragent.sequencer@@rseq [READ_GEN] read_transaction : Addr = 0
+# UVM_INFO read_driver.sv(29) @ 675000: uvm_test_top.env.ragent.driver [READ_DRV] ARADDR = 0
+# UVM_INFO write_sequence.sv(17) @ 675000: uvm_test_top.env.wagent.sequencer@@wseq [DRV] Driving TXN: addr=8, strb=1110, data=d8905892
+# UVM_INFO write_driver.sv(98) @ 675000: uvm_test_top.env.wagent.driver [DRV] WriteTXN is driven through virtual interface to DUT : addr=8, strb=1110, data=d8905892
+# UVM_INFO scoreboard.sv(39) @ 715000: uvm_test_top.env.scoreboard [SB] PASS: Addr=0x0 | Data=0x29dabb32
+# UVM_INFO write_sequence.sv(17) @ 715000: uvm_test_top.env.wagent.sequencer@@wseq [DRV] Driving TXN: addr=4, strb=0000, data=ecb65fa6
+# UVM_INFO write_driver.sv(98) @ 715000: uvm_test_top.env.wagent.driver [DRV] WriteTXN is driven through virtual interface to DUT : addr=4, strb=0000, data=ecb65fa6
+# UVM_INFO read_sequence.sv(18) @ 725000: uvm_test_top.env.ragent.sequencer@@rseq [READ_GEN] read_transaction : Addr = 0
+# UVM_INFO read_driver.sv(29) @ 735000: uvm_test_top.env.ragent.driver [READ_DRV] ARADDR = 4
+# UVM_INFO write_sequence.sv(17) @ 755000: uvm_test_top.env.wagent.sequencer@@wseq [DRV] Driving TXN: addr=c, strb=1010, data=d84bd2b7
+# UVM_INFO write_driver.sv(98) @ 755000: uvm_test_top.env.wagent.driver [DRV] WriteTXN is driven through virtual interface to DUT : addr=c, strb=1010, data=d84bd2b7
+# UVM_INFO scoreboard.sv(39) @ 775000: uvm_test_top.env.scoreboard [SB] PASS: Addr=0x4 | Data=0x32130761
+# UVM_INFO read_sequence.sv(18) @ 785000: uvm_test_top.env.ragent.sequencer@@rseq [READ_GEN] read_transaction : Addr = 4
+# UVM_INFO read_driver.sv(29) @ 795000: uvm_test_top.env.ragent.driver [READ_DRV] ARADDR = 4
+# UVM_INFO write_sequence.sv(17) @ 795000: uvm_test_top.env.wagent.sequencer@@wseq [DRV] Driving TXN: addr=4, strb=1001, data=34fe90a3
+# UVM_INFO write_driver.sv(98) @ 795000: uvm_test_top.env.wagent.driver [DRV] WriteTXN is driven through virtual interface to DUT : addr=4, strb=1001, data=34fe90a3
+# UVM_INFO scoreboard.sv(39) @ 835000: uvm_test_top.env.scoreboard [SB] PASS: Addr=0x4 | Data=0x341307a3
+# UVM_INFO read_sequence.sv(18) @ 845000: uvm_test_top.env.ragent.sequencer@@rseq [READ_GEN] read_transaction : Addr = 4
+# UVM_INFO read_driver.sv(29) @ 855000: uvm_test_top.env.ragent.driver [READ_DRV] ARADDR = 0
+# UVM_INFO scoreboard.sv(39) @ 895000: uvm_test_top.env.scoreboard [SB] PASS: Addr=0x0 | Data=0x29dabb32
+# UVM_INFO read_sequence.sv(18) @ 905000: uvm_test_top.env.ragent.sequencer@@rseq [READ_GEN] read_transaction : Addr = 0
+# UVM_INFO read_driver.sv(29) @ 915000: uvm_test_top.env.ragent.driver [READ_DRV] ARADDR = 12
+# UVM_INFO scoreboard.sv(39) @ 955000: uvm_test_top.env.scoreboard [SB] PASS: Addr=0xc | Data=0xd8e9d2f1
+# UVM_INFO read_sequence.sv(18) @ 965000: uvm_test_top.env.ragent.sequencer@@rseq [READ_GEN] read_transaction : Addr = c
+# UVM_INFO read_driver.sv(29) @ 975000: uvm_test_top.env.ragent.driver [READ_DRV] ARADDR = 12
+# UVM_INFO scoreboard.sv(39) @ 1015000: uvm_test_top.env.scoreboard [SB] PASS: Addr=0xc | Data=0xd8e9d2f1
+# UVM_INFO read_sequence.sv(18) @ 1025000: uvm_test_top.env.ragent.sequencer@@rseq [READ_GEN] read_transaction : Addr = c
+# UVM_INFO read_driver.sv(29) @ 1035000: uvm_test_top.env.ragent.driver [READ_DRV] ARADDR = 12
+# UVM_INFO scoreboard.sv(39) @ 1075000: uvm_test_top.env.scoreboard [SB] PASS: Addr=0xc | Data=0xd8e9d2f1
+# UVM_INFO read_sequence.sv(18) @ 1085000: uvm_test_top.env.ragent.sequencer@@rseq [READ_GEN] read_transaction : Addr = c
+# UVM_INFO read_driver.sv(29) @ 1095000: uvm_test_top.env.ragent.driver [READ_DRV] ARADDR = 4
+# UVM_INFO scoreboard.sv(39) @ 1135000: uvm_test_top.env.scoreboard [SB] PASS: Addr=0x4 | Data=0x341307a3
+# UVM_INFO read_sequence.sv(18) @ 1145000: uvm_test_top.env.ragent.sequencer@@rseq [READ_GEN] read_transaction : Addr = 4
+# UVM_INFO read_driver.sv(29) @ 1155000: uvm_test_top.env.ragent.driver [READ_DRV] ARADDR = 8
+# UVM_INFO scoreboard.sv(39) @ 1195000: uvm_test_top.env.scoreboard [SB] PASS: Addr=0x8 | Data=0xd8905888
+# UVM_INFO scoreboard.sv(43) @ 1195000: uvm_test_top.env.scoreboard [SB] Finished checking all transactions
+# ** Note: $finish    : scoreboard.sv(44)
+#    Time: 1195 ns  Iteration: 2  Region: /uvm_pkg::uvm_task_phase::execute
