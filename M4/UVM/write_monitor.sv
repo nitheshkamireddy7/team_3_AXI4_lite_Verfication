@@ -1,3 +1,4 @@
+
 class write_monitor extends uvm_monitor;
 
   virtual axi_if axi;
