@@ -1,0 +1,37 @@
+UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# --------------------------------------------------------------
+# Name                       Type                    Size  Value
+# --------------------------------------------------------------
+# uvm_test_top               axi_test                -     @472 
+#   env                      axi_env                 -     @479 
+#     coverage               axi_coverage            -     @515 
+#       analysis_imp         uvm_analysis_imp        -     @522 
+#     ragent                 read_agent              -     @493 
+#       driver               read_driver             -     @546 
+#         rsp_port           uvm_analysis_port       -     @561 
+#         seq_item_port      uvm_seq_item_pull_port  -     @553 
+#       monitor              read_monitor            -     @531 
+#         ap                 uvm_analysis_port       -     @538 
+#       sequencer            read_sequencer          -     @569 
+#         rsp_export         uvm_analysis_export     -     @576 
+#         seq_item_export    uvm_seq_item_pull_imp   -     @670 
+#         arbitration_queue  array                   0     -    
+#         lock_queue         array                   0     -    
+#         num_last_reqs      integral                32    'd1  
+#         num_last_rsps      integral                32    'd1  
+#     scoreboard             axi_scoreboard          -     @500 
+#       sb_imp               uvm_analysis_imp        -     @507 
+#     wagent                 write_agent             -     @486 
+#       driver               write_driver            -     @701 
+#         rsp_port           uvm_analysis_port       -     @716 
+#         seq_item_port      uvm_seq_item_pull_port  -     @708 
+#       monitor              write_monitor           -     @686 
+#         ap                 uvm_analysis_port       -     @693 
+#       sequencer            write_sequencer         -     @724 
+#         rsp_export         uvm_analysis_export     -     @731 
+#         seq_item_export    uvm_seq_item_pull_imp   -     @825 
+#         arbitration_queue  array                   0     -    
+#         lock_queue         array                   0     -    
+#         num_last_reqs      integral                32    'd1  
+#         num_last_rsps      integral                32    'd1  
+# --------------------------------------------------------------

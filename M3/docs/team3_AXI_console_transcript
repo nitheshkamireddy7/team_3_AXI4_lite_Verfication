@@ -1,0 +1,854 @@
+couldn't open "transcript": permission denied
+# Reading pref.tcl
+# //  Questa Sim-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+project open //thoth.cecs.pdx.edu/Home05/nitheshk/Desktop/AXI/AXI_class_based.mpf
+# Loading project AXI_class_based
+do run.do
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 21:22:46 on May 22,2025
+# vlog -reportprogress 300 -cover bcef AXI_SLAVE.sv 
+# -- Compiling module axi_lite_slave
+# 
+# Top level modules:
+# 	axi_lite_slave
+# End time: 21:22:47 on May 22,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# QuestaSim-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# Start time: 21:22:47 on May 22,2025
+# vlog -reportprogress 300 tb_top.sv 
+# -- Compiling interface axi_if
+# -- Compiling package tb_top_sv_unit
+# -- Compiling module tb_top
+# 
+# Top level modules:
+# 	tb_top
+# End time: 21:22:47 on May 22,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -coverage work.tb_top -voptargs="+acc" 
+# Start time: 21:22:47 on May 22,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading sv_std.std
+# Loading work.tb_top_sv_unit(fast)
+# Loading work.tb_top(fast)
+# Loading work.axi_if(fast__2)
+# Loading work.axi_lite_slave(fast)
+# Loading work.axi_if(fast)
+run -all
+# [DIRECTED] write_txn: Addr=4 Strobe=f Data=0000000a
+# [DIRECTED] write_txn: Addr=8 Strobe=f Data=00000080
+# [DIRECTED] write_txn: Addr=8 Strobe=f Data=00001000
+# [RANDOM] write_txn: Addr=8 Strobe=c Data=0000d6bf
+# [RANDOM] write_txn: Addr=0 Strobe=5 Data=00006596
+# [RANDOM] write_txn: Addr=8 Strobe=b Data=0000f6b2
+# [RANDOM] write_txn: Addr=8 Strobe=7 Data=0000b1e5
+# [RANDOM] write_txn: Addr=8 Strobe=3 Data=0000a24c
+# [RANDOM] write_txn: Addr=c Strobe=b Data=00004a39
+# [RANDOM] write_txn: Addr=4 Strobe=9 Data=00005bad
+# [RANDOM] write_txn: Addr=8 Strobe=9 Data=00003448
+# [RANDOM] write_txn: Addr=0 Strobe=d Data=000033d5
+# [RANDOM] write_txn: Addr=c Strobe=e Data=0000c904
+# [RANDOM] write_txn: Addr=c Strobe=e Data=00007e0f
+# [RANDOM] write_txn: Addr=c Strobe=3 Data=000027f6
+# [RANDOM] write_txn: Addr=4 Strobe=5 Data=00003650
+# [RANDOM] write_txn: Addr=8 Strobe=8 Data=00007cee
+# [RANDOM] write_txn: Addr=c Strobe=b Data=00008bc7
+# [RANDOM] write_txn: Addr=8 Strobe=d Data=0000e7b6
+# [RANDOM] write_txn: Addr=c Strobe=4 Data=000059b2
+# [RANDOM] write_txn: Addr=4 Strobe=8 Data=0000d9f6
+# [RANDOM] write_txn: Addr=c Strobe=c Data=00008329
+# [RANDOM] write_txn: Addr=0 Strobe=1 Data=0000bf4e
+# [RANDOM] write_txn: Addr=0 Strobe=b Data=00006953
+# [RANDOM] write_txn: Addr=c Strobe=c Data=0000f938
+# [RANDOM] write_txn: Addr=4 Strobe=a Data=00007c17
+# [RANDOM] write_txn: Addr=c Strobe=4 Data=00003708
+# [RANDOM] write_txn: Addr=8 Strobe=5 Data=0000b1f3
+# [RANDOM] write_txn: Addr=c Strobe=3 Data=00000897
+# [RANDOM] write_txn: Addr=0 Strobe=a Data=00004af2
+# [RANDOM] write_txn: Addr=8 Strobe=3 Data=0000d0e1
+# [RANDOM] write_txn: Addr=8 Strobe=d Data=00009543
+# [RANDOM] write_txn: Addr=8 Strobe=e Data=00001cdb
+# [RANDOM] write_txn: Addr=8 Strobe=8 Data=00009e3d
+# [RANDOM] write_txn: Addr=c Strobe=b Data=00000bf1
+# [RANDOM] write_txn: Addr=0 Strobe=2 Data=0000eb83
+# [RANDOM] write_txn: Addr=8 Strobe=7 Data=00006494
+# [RANDOM] write_txn: Addr=0 Strobe=2 Data=00003ebf
+# [RANDOM] write_txn: Addr=4 Strobe=6 Data=00008d0a
+# [RANDOM] write_txn: Addr=4 Strobe=7 Data=00009483
+# [RANDOM] write_txn: Addr=c Strobe=9 Data=00003ce4
+# [RANDOM] write_txn: Addr=8 Strobe=5 Data=0000a5ad
+# [RANDOM] write_txn: Addr=c Strobe=b Data=000017c9
+# [RANDOM] write_txn: Addr=0 Strobe=d Data=00005284
+# [RANDOM] write_txn: Addr=8 Strobe=3 Data=000048f1
+# [RANDOM] write_txn: Addr=4 Strobe=7 Data=0000bb1b
+# [RANDOM] write_txn: Addr=4 Strobe=2 Data=0000f69f
+# [RANDOM] write_txn: Addr=c Strobe=d Data=0000186d
+# [RANDOM] write_txn: Addr=c Strobe=8 Data=0000f6ee
+# [RANDOM] write_txn: Addr=8 Strobe=9 Data=00009cca
+# [RANDOM] write_txn: Addr=4 Strobe=6 Data=0000786b
+# [RANDOM] write_txn: Addr=8 Strobe=3 Data=000022ff
+# [RANDOM] write_txn: Addr=8 Strobe=a Data=00008199
+# [RANDOM] write_txn: Addr=0 Strobe=8 Data=0000e21b
+# [RANDOM] write_txn: Addr=8 Strobe=d Data=000078a3
+# [RANDOM] write_txn: Addr=8 Strobe=7 Data=00001368
+# [RANDOM] write_txn: Addr=8 Strobe=7 Data=0000e3f4
+# [RANDOM] write_txn: Addr=0 Strobe=5 Data=0000b05c
+# [RANDOM] write_txn: Addr=0 Strobe=7 Data=00001d95
+# [RANDOM] write_txn: Addr=8 Strobe=2 Data=00000ce5
+# [RANDOM] write_txn: Addr=4 Strobe=3 Data=0000ed45
+# [RANDOM] write_txn: Addr=8 Strobe=5 Data=00009a08
+# [RANDOM] write_txn: Addr=0 Strobe=a Data=000080b9
+# [RANDOM] write_txn: Addr=8 Strobe=c Data=00004722
+# [RANDOM] write_txn: Addr=4 Strobe=8 Data=00008598
+# [RANDOM] write_txn: Addr=c Strobe=e Data=0000cb0a
+# [RANDOM] write_txn: Addr=c Strobe=4 Data=0000aec9
+# [RANDOM] write_txn: Addr=c Strobe=b Data=00006823
+# [RANDOM] write_txn: Addr=8 Strobe=f Data=0000eed4
+# [RANDOM] write_txn: Addr=8 Strobe=1 Data=0000b8ef
+# [RANDOM] write_txn: Addr=8 Strobe=8 Data=00007d4a
+# [RANDOM] write_txn: Addr=c Strobe=3 Data=0000b694
+# [RANDOM] write_txn: Addr=c Strobe=2 Data=00002094
+# [RANDOM] write_txn: Addr=4 Strobe=a Data=00001b63
+# [RANDOM] write_txn: Addr=c Strobe=c Data=0000c227
+# [RANDOM] write_txn: Addr=8 Strobe=a Data=0000ea88
+# [RANDOM] write_txn: Addr=4 Strobe=3 Data=00006975
+# [RANDOM] write_txn: Addr=8 Strobe=e Data=0000aff1
+# [RANDOM] write_txn: Addr=4 Strobe=f Data=0000c2de
+# [RANDOM] write_txn: Addr=0 Strobe=c Data=00005d84
+# [RANDOM] write_txn: Addr=0 Strobe=2 Data=0000a5e9
+# [RANDOM] write_txn: Addr=c Strobe=1 Data=0000f7cc
+# [RANDOM] write_txn: Addr=8 Strobe=9 Data=0000848d
+# [RANDOM] write_txn: Addr=c Strobe=a Data=0000426c
+# [RANDOM] write_txn: Addr=4 Strobe=4 Data=00009946
+# [RANDOM] write_txn: Addr=c Strobe=5 Data=0000d044
+# [RANDOM] write_txn: Addr=0 Strobe=d Data=0000aaa3
+# [RANDOM] write_txn: Addr=4 Strobe=9 Data=0000772b
+# [RANDOM] write_txn: Addr=4 Strobe=b Data=0000b01d
+# [RANDOM] write_txn: Addr=0 Strobe=e Data=00008d8e
+# [RANDOM] write_txn: Addr=4 Strobe=a Data=0000467d
+# [RANDOM] write_txn: Addr=c Strobe=e Data=00006c4d
+# [RANDOM] write_txn: Addr=c Strobe=2 Data=0000e250
+# [RANDOM] write_txn: Addr=8 Strobe=e Data=0000cf52
+# [RANDOM] write_txn: Addr=8 Strobe=2 Data=0000df9d
+# [RANDOM] write_txn: Addr=8 Strobe=9 Data=0000054b
+# [RANDOM] write_txn: Addr=8 Strobe=4 Data=00003091
+# [RANDOM] write_txn: Addr=c Strobe=c Data=0000a1ab
+# [RANDOM] write_txn: Addr=4 Strobe=8 Data=000092af
+# [RANDOM] write_txn: Addr=c Strobe=5 Data=00008015
+# [RANDOM] write_txn: Addr=c Strobe=5 Data=0000a852
+# [RANDOM] write_txn: Addr=8 Strobe=c Data=0000d556
+# [RANDOM] write_txn: Addr=0 Strobe=c Data=000015c9
+# [RANDOM] write_txn: Addr=4 Strobe=d Data=000051bf
+# [RANDOM] write_txn: Addr=4 Strobe=2 Data=0000d39c
+# [RANDOM] write_txn: Addr=4 Strobe=3 Data=0000c526
+# [RANDOM] write_txn: Addr=4 Strobe=9 Data=00006aed
+# [RANDOM] write_txn: Addr=0 Strobe=d Data=00007980
+# [RANDOM] write_txn: Addr=0 Strobe=a Data=00002cbc
+# [RANDOM] write_txn: Addr=4 Strobe=9 Data=0000b2bc
+# [RANDOM] write_txn: Addr=8 Strobe=f Data=00000a7d
+# [RANDOM] write_txn: Addr=8 Strobe=4 Data=00002bcd
+# [RANDOM] write_txn: Addr=4 Strobe=c Data=000010ae
+# [RANDOM] write_txn: Addr=0 Strobe=c Data=00003faf
+# [RANDOM] write_txn: Addr=c Strobe=e Data=0000e9cf
+# [RANDOM] write_txn: Addr=8 Strobe=5 Data=0000642e
+# [RANDOM] write_txn: Addr=c Strobe=c Data=0000e6b5
+# [RANDOM] write_txn: Addr=c Strobe=7 Data=00003750
+# [RANDOM] write_txn: Addr=4 Strobe=c Data=0000de64
+# [RANDOM] write_txn: Addr=8 Strobe=2 Data=0000704f
+# [RANDOM] write_txn: Addr=8 Strobe=a Data=0000c606
+# [RANDOM] write_txn: Addr=0 Strobe=4 Data=0000a8dc
+# [RANDOM] write_txn: Addr=4 Strobe=3 Data=000037bc
+# [RANDOM] write_txn: Addr=8 Strobe=d Data=0000ba84
+# [RANDOM] write_txn: Addr=4 Strobe=1 Data=0000231b
+# [RANDOM] write_txn: Addr=4 Strobe=a Data=000093b3
+# [RANDOM] write_txn: Addr=0 Strobe=4 Data=00003ea0
+# [RANDOM] write_txn: Addr=0 Strobe=7 Data=00004673
+# [RANDOM] write_txn: Addr=0 Strobe=e Data=00006060
+# [RANDOM] write_txn: Addr=0 Strobe=2 Data=0000bf31
+# [RANDOM] write_txn: Addr=4 Strobe=c Data=0000bbfd
+# [RANDOM] write_txn: Addr=8 Strobe=7 Data=00005dcf
+# [RANDOM] write_txn: Addr=4 Strobe=5 Data=000053a4
+# [RANDOM] write_txn: Addr=8 Strobe=f Data=00004c2e
+# [RANDOM] write_txn: Addr=4 Strobe=5 Data=0000486c
+# [RANDOM] write_txn: Addr=4 Strobe=4 Data=0000d4d4
+# [RANDOM] write_txn: Addr=8 Strobe=9 Data=0000f409
+# [RANDOM] write_txn: Addr=8 Strobe=3 Data=00001dc0
+# [RANDOM] write_txn: Addr=8 Strobe=e Data=0000e2a8
+# [RANDOM] write_txn: Addr=0 Strobe=5 Data=00001640
+# [RANDOM] write_txn: Addr=4 Strobe=d Data=00006ff9
+# [RANDOM] write_txn: Addr=4 Strobe=1 Data=0000d2d0
+# [RANDOM] write_txn: Addr=c Strobe=c Data=0000fb5c
+# [RANDOM] write_txn: Addr=0 Strobe=a Data=0000e61d
+# [RANDOM] write_txn: Addr=4 Strobe=9 Data=000060e8
+# [RANDOM] write_txn: Addr=4 Strobe=c Data=0000d4f5
+# [RANDOM] write_txn: Addr=c Strobe=5 Data=0000c291
+# [RANDOM] write_txn: Addr=c Strobe=b Data=0000cd44
+# [RANDOM] write_txn: Addr=0 Strobe=9 Data=00005a5c
+# [RANDOM] write_txn: Addr=8 Strobe=6 Data=0000e053
+# [RANDOM] write_txn: Addr=c Strobe=2 Data=00004e11
+# [RANDOM] write_txn: Addr=4 Strobe=d Data=0000770b
+# [RANDOM] write_txn: Addr=8 Strobe=e Data=0000372a
+# [RANDOM] write_txn: Addr=4 Strobe=f Data=0000fe25
+# [RANDOM] write_txn: Addr=c Strobe=a Data=0000d7ee
+# [RANDOM] write_txn: Addr=8 Strobe=7 Data=00001d28
+# [RANDOM] write_txn: Addr=c Strobe=1 Data=0000f49d
+# [RANDOM] write_txn: Addr=c Strobe=4 Data=0000b672
+# [RANDOM] write_txn: Addr=0 Strobe=1 Data=0000e1aa
+# [RANDOM] write_txn: Addr=4 Strobe=9 Data=000087b5
+# [RANDOM] write_txn: Addr=8 Strobe=6 Data=000044f1
+# [RANDOM] write_txn: Addr=0 Strobe=2 Data=0000eeb3
+# [RANDOM] write_txn: Addr=0 Strobe=b Data=00008c73
+# [RANDOM] write_txn: Addr=c Strobe=9 Data=0000862e
+# [RANDOM] write_txn: Addr=8 Strobe=c Data=00003c1a
+# [RANDOM] write_txn: Addr=c Strobe=2 Data=00000563
+# [RANDOM] write_txn: Addr=0 Strobe=8 Data=00004086
+# [RANDOM] write_txn: Addr=4 Strobe=a Data=0000a6ff
+# [RANDOM] write_txn: Addr=c Strobe=4 Data=000098af
+# [RANDOM] write_txn: Addr=4 Strobe=a Data=00003de8
+# [RANDOM] write_txn: Addr=c Strobe=6 Data=0000e911
+# [RANDOM] write_txn: Addr=0 Strobe=1 Data=00009c32
+# [RANDOM] write_txn: Addr=8 Strobe=7 Data=00007cc5
+# [RANDOM] write_txn: Addr=8 Strobe=e Data=00006fff
+# [RANDOM] write_txn: Addr=4 Strobe=2 Data=000006b6
+# [RANDOM] write_txn: Addr=c Strobe=8 Data=000002b3
+# [RANDOM] write_txn: Addr=c Strobe=6 Data=000099cd
+# [RANDOM] write_txn: Addr=c Strobe=d Data=00005b28
+# [RANDOM] write_txn: Addr=0 Strobe=1 Data=0000a619
+# [RANDOM] write_txn: Addr=c Strobe=5 Data=0000abcc
+# [RANDOM] write_txn: Addr=c Strobe=c Data=0000e38c
+# [RANDOM] write_txn: Addr=8 Strobe=c Data=00006d47
+# [RANDOM] write_txn: Addr=4 Strobe=9 Data=0000b679
+# [RANDOM] write_txn: Addr=0 Strobe=f Data=0000ae8a
+# [RANDOM] write_txn: Addr=8 Strobe=e Data=0000f181
+# [RANDOM] write_txn: Addr=0 Strobe=e Data=0000110c
+# [RANDOM] write_txn: Addr=0 Strobe=7 Data=00006fe1
+# [RANDOM] write_txn: Addr=8 Strobe=4 Data=00002ea5
+# [RANDOM] write_txn: Addr=8 Strobe=c Data=00009792
+# [RANDOM] write_txn: Addr=0 Strobe=3 Data=0000e8a3
+# [RANDOM] write_txn: Addr=c Strobe=2 Data=00002e3f
+# [RANDOM] write_txn: Addr=0 Strobe=b Data=00005652
+# [RANDOM] write_txn: Addr=c Strobe=c Data=0000c573
+# [RANDOM] write_txn: Addr=c Strobe=e Data=000045a9
+# [RANDOM] write_txn: Addr=8 Strobe=6 Data=0000d03e
+# [RANDOM] write_txn: Addr=c Strobe=f Data=00005c76
+# [RANDOM] write_txn: Addr=0 Strobe=1 Data=0000f88f
+# [RANDOM] write_txn: Addr=4 Strobe=3 Data=00008224
+# [RANDOM] write_txn: Addr=0 Strobe=c Data=000001b0
+# [RANDOM] write_txn: Addr=c Strobe=a Data=00007fd2
+# read_transaction : Addr = c
+# read_transaction : Addr = c
+# read_transaction : Addr = 4
+# read_transaction : Addr = c
+# read_transaction : Addr = 4
+# read_transaction : Addr = 4
+# read_transaction : Addr = 8
+# read_transaction : Addr = c
+# read_transaction : Addr = 8
+# read_transaction : Addr = 4
+# read_transaction : Addr = 4
+# read_transaction : Addr = c
+# read_transaction : Addr = c
+# read_transaction : Addr = 8
+# read_transaction : Addr = c
+# read_transaction : Addr = c
+# read_transaction : Addr = 8
+# read_transaction : Addr = 0
+# read_transaction : Addr = 0
+# read_transaction : Addr = 8
+# read_transaction : Addr = c
+# read_transaction : Addr = 8
+# read_transaction : Addr = 4
+# read_transaction : Addr = c
+# read_transaction : Addr = 0
+# read_transaction : Addr = 4
+# read_transaction : Addr = 4
+# read_transaction : Addr = 0
+# read_transaction : Addr = 0
+# read_transaction : Addr = 4
+# read_transaction : Addr = 4
+# read_transaction : Addr = 4
+# read_transaction : Addr = 8
+# read_transaction : Addr = 4
+# read_transaction : Addr = 0
+# read_transaction : Addr = 0
+# read_transaction : Addr = 0
+# read_transaction : Addr = 4
+# read_transaction : Addr = c
+# read_transaction : Addr = 8
+# read_transaction : Addr = 0
+# read_transaction : Addr = c
+# read_transaction : Addr = c
+# read_transaction : Addr = 0
+# read_transaction : Addr = 0
+# read_transaction : Addr = 8
+# read_transaction : Addr = 8
+# read_transaction : Addr = 0
+# read_transaction : Addr = 8
+# read_transaction : Addr = 0
+# read_transaction : Addr = 4
+# read_transaction : Addr = c
+# read_transaction : Addr = 0
+# read_transaction : Addr = c
+# read_transaction : Addr = 4
+# read_transaction : Addr = 0
+# read_transaction : Addr = 0
+# read_transaction : Addr = 0
+# read_transaction : Addr = 8
+# read_transaction : Addr = c
+# read_transaction : Addr = 4
+# read_transaction : Addr = c
+# read_transaction : Addr = 8
+# read_transaction : Addr = c
+# read_transaction : Addr = 8
+# read_transaction : Addr = 8
+# read_transaction : Addr = 0
+# read_transaction : Addr = 0
+# read_transaction : Addr = 0
+# read_transaction : Addr = c
+# read_transaction : Addr = 8
+# read_transaction : Addr = 4
+# read_transaction : Addr = 4
+# read_transaction : Addr = 8
+# read_transaction : Addr = c
+# read_transaction : Addr = 0
+# read_transaction : Addr = 4
+# read_transaction : Addr = 4
+# read_transaction : Addr = 0
+# read_transaction : Addr = c
+# read_transaction : Addr = 0
+# read_transaction : Addr = 0
+# read_transaction : Addr = c
+# read_transaction : Addr = c
+# read_transaction : Addr = 4
+# read_transaction : Addr = 0
+# read_transaction : Addr = 8
+# read_transaction : Addr = 4
+# read_transaction : Addr = 8
+# read_transaction : Addr = c
+# read_transaction : Addr = 4
+# read_transaction : Addr = 8
+# read_transaction : Addr = 0
+# read_transaction : Addr = 0
+# read_transaction : Addr = c
+# read_transaction : Addr = c
+# read_transaction : Addr = 0
+# read_transaction : Addr = 4
+# read_transaction : Addr = c
+# read_transaction : Addr = 8
+# read_transaction : Addr = c
+# read_transaction : Addr = 4
+# read_transaction : Addr = c
+# read_transaction : Addr = c
+# read_transaction : Addr = c
+# read_transaction : Addr = 0
+# read_transaction : Addr = c
+# read_transaction : Addr = 8
+# read_transaction : Addr = 0
+# read_transaction : Addr = 8
+# read_transaction : Addr = 0
+# read_transaction : Addr = 0
+# read_transaction : Addr = 0
+# read_transaction : Addr = 4
+# read_transaction : Addr = 4
+# read_transaction : Addr = 0
+# read_transaction : Addr = 4
+# read_transaction : Addr = c
+# read_transaction : Addr = 0
+# read_transaction : Addr = 4
+# read_transaction : Addr = 0
+# read_transaction : Addr = 4
+# read_transaction : Addr = 8
+# read_transaction : Addr = 8
+# read_transaction : Addr = 8
+# read_transaction : Addr = 0
+# read_transaction : Addr = 4
+# read_transaction : Addr = 8
+# read_transaction : Addr = 0
+# read_transaction : Addr = c
+# read_transaction : Addr = 0
+# read_transaction : Addr = c
+# read_transaction : Addr = 4
+# read_transaction : Addr = 8
+# read_transaction : Addr = c
+# read_transaction : Addr = 4
+# read_transaction : Addr = 0
+# read_transaction : Addr = 8
+# read_transaction : Addr = 4
+# read_transaction : Addr = c
+# read_transaction : Addr = 0
+# read_transaction : Addr = 4
+# read_transaction : Addr = c
+# read_transaction : Addr = 0
+# read_transaction : Addr = 8
+# read_transaction : Addr = 4
+# read_transaction : Addr = c
+# read_transaction : Addr = c
+# read_transaction : Addr = c
+# read_transaction : Addr = 8
+# read_transaction : Addr = c
+# read_transaction : Addr = 4
+# read_transaction : Addr = c
+# read_transaction : Addr = 0
+# read_transaction : Addr = 4
+# read_transaction : Addr = 8
+# read_transaction : Addr = c
+# read_transaction : Addr = c
+# read_transaction : Addr = 0
+# read_transaction : Addr = 8
+# read_transaction : Addr = 0
+# read_transaction : Addr = 4
+# read_transaction : Addr = 4
+# read_transaction : Addr = c
+# read_transaction : Addr = 8
+# read_transaction : Addr = 0
+# read_transaction : Addr = 0
+# read_transaction : Addr = 8
+# read_transaction : Addr = 4
+# read_transaction : Addr = 0
+# read_transaction : Addr = c
+# read_transaction : Addr = c
+# read_transaction : Addr = 4
+# read_transaction : Addr = 8
+# read_transaction : Addr = 0
+# read_transaction : Addr = 8
+# read_transaction : Addr = 8
+# read_transaction : Addr = 8
+# read_transaction : Addr = 0
+# read_transaction : Addr = 0
+# read_transaction : Addr = c
+# read_transaction : Addr = 4
+# read_transaction : Addr = 4
+# read_transaction : Addr = 4
+# read_transaction : Addr = c
+# read_transaction : Addr = 8
+# read_transaction : Addr = 0
+# read_transaction : Addr = c
+# read_transaction : Addr = 0
+# read_transaction : Addr = 8
+# read_transaction : Addr = c
+# read_transaction : Addr = 8
+# read_transaction : Addr = 8
+# read_transaction : Addr = 4
+# read_transaction : Addr = 4
+# read_transaction : Addr = 8
+# read_transaction : Addr = 8
+# read_transaction : Addr = c
+# read_transaction : Addr = c
+# read_transaction : Addr = 4
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00000000 | Expected from reference model=0x00000000
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00000000 | Expected from reference model=0x00000000
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x0000000a | Expected from reference model=0x0000000a
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00000000 | Expected from reference model=0x00000000
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x0000000a | Expected from reference model=0x0000000a
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x0000000a | Expected from reference model=0x0000000a
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000a24c | Expected from reference model=0x0000a24c
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00004a39 | Expected from reference model=0x00004a39
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000a248 | Expected from reference model=0x0000a248
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x000000ad | Expected from reference model=0x000000ad
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x000000ad | Expected from reference model=0x000000ad
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x000027f6 | Expected from reference model=0x000027f6
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00008bc7 | Expected from reference model=0x00008bc7
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000a2b6 | Expected from reference model=0x0000a2b6
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00008bc7 | Expected from reference model=0x00008bc7
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00008bc7 | Expected from reference model=0x00008bc7
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000a2b6 | Expected from reference model=0x0000a2b6
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00006953 | Expected from reference model=0x00006953
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00006953 | Expected from reference model=0x00006953
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000a2f3 | Expected from reference model=0x0000a2f3
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00000897 | Expected from reference model=0x00000897
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000d043 | Expected from reference model=0x0000d043
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x00007c50 | Expected from reference model=0x00007c50
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00000bf1 | Expected from reference model=0x00000bf1
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x0000eb53 | Expected from reference model=0x0000eb53
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x00007c50 | Expected from reference model=0x00007c50
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x00008d50 | Expected from reference model=0x00008d50
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00003e53 | Expected from reference model=0x00003e53
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00003e53 | Expected from reference model=0x00003e53
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x00009483 | Expected from reference model=0x00009483
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x00009483 | Expected from reference model=0x00009483
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x0000f61b | Expected from reference model=0x0000f61b
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x000048f1 | Expected from reference model=0x000048f1
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x0000f61b | Expected from reference model=0x0000f61b
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00003e84 | Expected from reference model=0x00003e84
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00003e84 | Expected from reference model=0x00003e84
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00003e84 | Expected from reference model=0x00003e84
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x0000781b | Expected from reference model=0x0000781b
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x0000176d | Expected from reference model=0x0000176d
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000e3f4 | Expected from reference model=0x0000e3f4
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00001d95 | Expected from reference model=0x00001d95
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x0000176d | Expected from reference model=0x0000176d
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x0000176d | Expected from reference model=0x0000176d
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00008095 | Expected from reference model=0x00008095
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00008095 | Expected from reference model=0x00008095
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x00000c08 | Expected from reference model=0x00000c08
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000eed4 | Expected from reference model=0x0000eed4
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00008095 | Expected from reference model=0x00008095
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000eeef | Expected from reference model=0x0000eeef
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00008095 | Expected from reference model=0x00008095
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x00001b45 | Expected from reference model=0x00001b45
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00002094 | Expected from reference model=0x00002094
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00008095 | Expected from reference model=0x00008095
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00002094 | Expected from reference model=0x00002094
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x0000c2de | Expected from reference model=0x0000c2de
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x0000a595 | Expected from reference model=0x0000a595
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x0000a595 | Expected from reference model=0x0000a595
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x0000a595 | Expected from reference model=0x0000a595
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000af8d | Expected from reference model=0x0000af8d
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00004244 | Expected from reference model=0x00004244
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x0000b01d | Expected from reference model=0x0000b01d
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00006c44 | Expected from reference model=0x00006c44
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000af8d | Expected from reference model=0x0000af8d
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x0000e244 | Expected from reference model=0x0000e244
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000df4b | Expected from reference model=0x0000df4b
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000df4b | Expected from reference model=0x0000df4b
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00008da3 | Expected from reference model=0x00008da3
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00008da3 | Expected from reference model=0x00008da3
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00008da3 | Expected from reference model=0x00008da3
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x0000e252 | Expected from reference model=0x0000e252
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000df4b | Expected from reference model=0x0000df4b
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x0000c5ed | Expected from reference model=0x0000c5ed
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x0000c5ed | Expected from reference model=0x0000c5ed
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000df4b | Expected from reference model=0x0000df4b
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x0000e252 | Expected from reference model=0x0000e252
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00002c80 | Expected from reference model=0x00002c80
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x0000c5bc | Expected from reference model=0x0000c5bc
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x0000c5bc | Expected from reference model=0x0000c5bc
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00002c80 | Expected from reference model=0x00002c80
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00003750 | Expected from reference model=0x00003750
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00002c80 | Expected from reference model=0x00002c80
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00002c80 | Expected from reference model=0x00002c80
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00003750 | Expected from reference model=0x00003750
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00003750 | Expected from reference model=0x00003750
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x0000931b | Expected from reference model=0x0000931b
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00004673 | Expected from reference model=0x00004673
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000c684 | Expected from reference model=0x0000c684
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x0000931b | Expected from reference model=0x0000931b
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x00005dcf | Expected from reference model=0x00005dcf
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00003750 | Expected from reference model=0x00003750
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x0000936c | Expected from reference model=0x0000936c
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x00004c09 | Expected from reference model=0x00004c09
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x0000bf73 | Expected from reference model=0x0000bf73
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x0000bf40 | Expected from reference model=0x0000bf40
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00003750 | Expected from reference model=0x00003750
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00003750 | Expected from reference model=0x00003750
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x0000e640 | Expected from reference model=0x0000e640
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x000093e8 | Expected from reference model=0x000093e8
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00003791 | Expected from reference model=0x00003791
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000e2c0 | Expected from reference model=0x0000e2c0
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x0000cd44 | Expected from reference model=0x0000cd44
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x0000930b | Expected from reference model=0x0000930b
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00004e44 | Expected from reference model=0x00004e44
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x0000d744 | Expected from reference model=0x0000d744
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x0000d744 | Expected from reference model=0x0000d744
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x0000e65c | Expected from reference model=0x0000e65c
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x0000d79d | Expected from reference model=0x0000d79d
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x00004428 | Expected from reference model=0x00004428
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x0000eeaa | Expected from reference model=0x0000eeaa
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x00004428 | Expected from reference model=0x00004428
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00008c73 | Expected from reference model=0x00008c73
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00008c73 | Expected from reference model=0x00008c73
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00008c73 | Expected from reference model=0x00008c73
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x00003db5 | Expected from reference model=0x00003db5
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x00003db5 | Expected from reference model=0x00003db5
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00008c32 | Expected from reference model=0x00008c32
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x00003db5 | Expected from reference model=0x00003db5
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x0000e92e | Expected from reference model=0x0000e92e
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00008c32 | Expected from reference model=0x00008c32
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x000006b5 | Expected from reference model=0x000006b5
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00008c19 | Expected from reference model=0x00008c19
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x000006b5 | Expected from reference model=0x000006b5
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x00006fc5 | Expected from reference model=0x00006fc5
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000f1c5 | Expected from reference model=0x0000f1c5
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000f1c5 | Expected from reference model=0x0000f1c5
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00006fe1 | Expected from reference model=0x00006fe1
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x00000679 | Expected from reference model=0x00000679
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000f1c5 | Expected from reference model=0x0000f1c5
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00005652 | Expected from reference model=0x00005652
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x000045cc | Expected from reference model=0x000045cc
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x00005652 | Expected from reference model=0x00005652
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00005c76 | Expected from reference model=0x00005c76
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x00008224 | Expected from reference model=0x00008224
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000d0c5 | Expected from reference model=0x0000d0c5
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00007f76 | Expected from reference model=0x00007f76
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x00008224 | Expected from reference model=0x00008224
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x0000568f | Expected from reference model=0x0000568f
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000d0c5 | Expected from reference model=0x0000d0c5
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x00008224 | Expected from reference model=0x00008224
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00007f76 | Expected from reference model=0x00007f76
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x0000568f | Expected from reference model=0x0000568f
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x00008224 | Expected from reference model=0x00008224
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00007f76 | Expected from reference model=0x00007f76
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x0000568f | Expected from reference model=0x0000568f
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000d0c5 | Expected from reference model=0x0000d0c5
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x00008224 | Expected from reference model=0x00008224
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00007f76 | Expected from reference model=0x00007f76
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00007f76 | Expected from reference model=0x00007f76
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00007f76 | Expected from reference model=0x00007f76
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000d0c5 | Expected from reference model=0x0000d0c5
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00007f76 | Expected from reference model=0x00007f76
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x00008224 | Expected from reference model=0x00008224
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00007f76 | Expected from reference model=0x00007f76
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x0000568f | Expected from reference model=0x0000568f
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x00008224 | Expected from reference model=0x00008224
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000d0c5 | Expected from reference model=0x0000d0c5
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00007f76 | Expected from reference model=0x00007f76
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00007f76 | Expected from reference model=0x00007f76
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x0000568f | Expected from reference model=0x0000568f
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000d0c5 | Expected from reference model=0x0000d0c5
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x0000568f | Expected from reference model=0x0000568f
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x00008224 | Expected from reference model=0x00008224
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x00008224 | Expected from reference model=0x00008224
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00007f76 | Expected from reference model=0x00007f76
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000d0c5 | Expected from reference model=0x0000d0c5
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x0000568f | Expected from reference model=0x0000568f
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x0000568f | Expected from reference model=0x0000568f
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000d0c5 | Expected from reference model=0x0000d0c5
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x00008224 | Expected from reference model=0x00008224
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x0000568f | Expected from reference model=0x0000568f
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00007f76 | Expected from reference model=0x00007f76
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00007f76 | Expected from reference model=0x00007f76
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x00008224 | Expected from reference model=0x00008224
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000d0c5 | Expected from reference model=0x0000d0c5
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x0000568f | Expected from reference model=0x0000568f
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000d0c5 | Expected from reference model=0x0000d0c5
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000d0c5 | Expected from reference model=0x0000d0c5
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000d0c5 | Expected from reference model=0x0000d0c5
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x0000568f | Expected from reference model=0x0000568f
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x0000568f | Expected from reference model=0x0000568f
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00007f76 | Expected from reference model=0x00007f76
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x00008224 | Expected from reference model=0x00008224
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x00008224 | Expected from reference model=0x00008224
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x00008224 | Expected from reference model=0x00008224
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00007f76 | Expected from reference model=0x00007f76
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000d0c5 | Expected from reference model=0x0000d0c5
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x0000568f | Expected from reference model=0x0000568f
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00007f76 | Expected from reference model=0x00007f76
+# READ DRIVER: ARADDR = 0
+# Scoreboard PASS: Addr=0x0 | Data=0x0000568f | Expected from reference model=0x0000568f
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000d0c5 | Expected from reference model=0x0000d0c5
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00007f76 | Expected from reference model=0x00007f76
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000d0c5 | Expected from reference model=0x0000d0c5
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000d0c5 | Expected from reference model=0x0000d0c5
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x00008224 | Expected from reference model=0x00008224
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x00008224 | Expected from reference model=0x00008224
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000d0c5 | Expected from reference model=0x0000d0c5
+# READ DRIVER: ARADDR = 8
+# Scoreboard PASS: Addr=0x8 | Data=0x0000d0c5 | Expected from reference model=0x0000d0c5
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00007f76 | Expected from reference model=0x00007f76
+# READ DRIVER: ARADDR = 12
+# Scoreboard PASS: Addr=0xc | Data=0x00007f76 | Expected from reference model=0x00007f76
+# READ DRIVER: ARADDR = 4
+# Scoreboard PASS: Addr=0x4 | Data=0x00008224 | Expected from reference model=0x00008224
+# SCOREBOARD: Completed 200 checks. Simulation done!
+# ** Note: $finish    : scoreboard.sv(73)
+#    Time: 11995 ns  Iteration: 4  Region: /tb_top_sv_unit::scoreboard::run
+# 1
+# Break in Task tb_top_sv_unit/scoreboard::run at scoreboard.sv line 73
